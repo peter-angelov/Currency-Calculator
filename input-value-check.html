@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number Input Validation</title>
+</head>
+<body>
+	<label for="numberInput">Only numbers and dot: </label>
+    <input type="text" id="numberInput" onkeypress="return validateInput(event)" onpaste="return handlePaste(event)" style="font-size: 1.2em; padding: 5px;">
+	<div style="border: 1px solid gray; padding: 7px 10px; margin-left: 10px; display: inline-block; width: auto;">
+	 Try to copy/paste any of the following examples (form accepts only numbers and dot; in case the value contains forbidden symbols they will be stripped and the rest will be displayed): 1TR, $##A, 74.@0
+	</div>
+
+    <script>
+    // Function to validate keypress input
+    function validateInput(event) {
+        // Get the character code of the pressed key
+        const charCode = event.which ? event.which : event.keyCode;
+        
+        // Allow dot (46) and numbers (48-57)
+        if (charCode === 46 || (charCode >= 48 && charCode <= 57)) {
+            // Additional check to prevent multiple dots
+            const input = event.target;
+            if (charCode === 46 && input.value.includes('.')) {
+                return false;
+            }
+            return true;
+        }
+        
+        // Prevent other characters
+        return false;
+    }
+
+    // Function to handle paste event
+    function handlePaste(event) {
+        // Prevent default paste
+        event.preventDefault();
+        
+        // Get clipboard data
+        const clipboardData = event.clipboardData || window.clipboardData;
+        const pastedText = clipboardData.getData('text');
+        
+        // Filter out non-numeric and non-dot characters
+        const filteredText = pastedText.replace(/[^0-9.]/g, '');
+        
+        // Ensure only one dot
+        const parts = filteredText.split('.');
+        const sanitizedText = parts.length > 2 
+            ? parts[0] + '.' + parts.slice(1).join('')
+            : filteredText;
+        
+        // Insert filtered text
+        event.target.value = sanitizedText;
+        
+        return false;
+    }
+    </script>
+</body>
+</html>
