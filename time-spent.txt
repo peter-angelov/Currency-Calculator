@@ -1,0 +1,6 @@
+Time spend:
+
+1. Getting familiar with product: 6h.
+2. Providing code as suggestion and automation using AI (Gemini and Claude) - 8h (note: I did list a lot of time here, because for one of the case I intended to provide an automation. Unfortunately the final result was ok from technical point of view, but I found that my logic is wrong. Thus the script is removed from GitHub).
+3. Test case creation and issue/suggestions reports - 8h.
+4. Test Summary Report: 2h.
