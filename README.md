@@ -1,2 +1,1 @@
-# currency
 Currency Exchange Calculator
