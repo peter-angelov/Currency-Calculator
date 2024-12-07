@@ -1,0 +1,44 @@
+As there is no FDS available an exploratory testing will be performed. 
+The following to be checked:
+
+1. Main functionality:
+
+	a) check if the exchange rates are updated regularly and correspond to real market rates;
+	b) check if calculations with specific sum are accurate
+	
+2. Border value check:
+
+	a) check the calculator behaviour when 0 is converted;
+	b) check the calculator behaviour when minimal value (1) is converted;
+	c) check the calculator behaviour when maximum value (99999999999) is converted;
+	d) check the calculator behaviour when above maximum value (999999999999) is converted;
+	
+3. Negative values:
+
+	a) check the calculator behaviour when letters are entered;
+	b) check the calculator behaviour when punctuation marks are entered;
+	c) check the calculator behaviour when combination of numbers and letters/punctuation marks are entered;
+	d) check the calculator behaviour when negative value is entered;
+	e) check the calculator behaviour when an empty field is submitted
+	
+4. Numbers formatting:
+
+	a) check the calculator behaviour when different symbols are used for decimal point, e.g. "." or ","
+	
+5. Check the user interface:
+
+	a) check if the user interface is intuitive enough;
+	b) check the speed of the interface;
+	c) check the interface is accessible to people with disabilities;
+	d) check if the error messages are understandable
+	
+6. Additional tests:
+
+	a) check the calculator behaviour when there is no connection to internet;
+	b) check the calculator on language switch;
+	c) check DevTools for errors when using calculator
+	
+7. Compatibility test:
+
+	a) check the calculator on latest version on most used browsers;
+	b) check the calculator on different OS
