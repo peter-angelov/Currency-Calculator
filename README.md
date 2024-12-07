@@ -1,4 +1,4 @@
-Currency Exchange Calculator
+<ins>Currency Exchange Calculator</ins>
 
 1. Test Summary Report: test-summary-report.doc
 2. Checklist: checklist.txt
